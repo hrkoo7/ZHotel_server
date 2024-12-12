@@ -1,0 +1,8 @@
+package com.hotelproject.ZHotel.exception;
+
+public class OurException extends RuntimeException {
+
+    public OurException(String message) {
+        super(message);
+    }
+}
