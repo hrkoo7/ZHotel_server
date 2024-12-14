@@ -18,7 +18,7 @@ import java.io.InputStream;
 public class AwsS3Service {
 
     //    private final String bucketName = "images";
-    private final String bucketName = "hotel-project-image";
+    private final String bucketName = "hotel-project-img";
 
     @Value("${aws.s3.access.key}")
     private String awsS3AccessKey;
@@ -36,7 +36,7 @@ public class AwsS3Service {
             BasicAWSCredentials awsCredentials = new BasicAWSCredentials(awsS3AccessKey, awsS3SecretKey);
             AmazonS3 s3Client = AmazonS3ClientBuilder.standard()
                     .withCredentials(new AWSStaticCredentialsProvider(awsCredentials))
-                    .withRegion(Regions.US_EAST_2)
+                    .withRegion(Regions.AP_SOUTHEAST_2)
                     .build();
 
             InputStream inputStream = photo.getInputStream();
